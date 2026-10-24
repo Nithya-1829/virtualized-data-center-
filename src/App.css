@@ -1,0 +1,274 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6fb;
+  color: #17243b;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: #14233f;
+  color: white;
+  padding: 32px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.eyebrow {
+  color: #8db9ff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #c4cee0;
+}
+
+.live-badge {
+  background: #203b53;
+  color: #75e0b1;
+  border: 1px solid #376c66;
+  padding: 10px 14px;
+  border-radius: 25px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 24px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stat-card,
+.machine-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(22, 40, 70, 0.04);
+}
+
+.stat-card span {
+  color: #69778e;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin: 15px 0 8px;
+  font-size: 30px;
+}
+
+.stat-card p {
+  color: #8290a5;
+  font-size: 12px;
+}
+
+.progress {
+  height: 7px;
+  background: #e8edf5;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress div {
+  height: 100%;
+  background: #477df5;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.machines-section {
+  margin-top: 36px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0 0 8px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #77849a;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.add-button {
+  background: #477df5;
+  color: white;
+}
+
+.machine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.machine-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.server-icon {
+  background: #eaf0ff;
+  color: #477df5;
+  border-radius: 10px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+}
+
+.status {
+  font-size: 12px;
+  padding: 7px 10px;
+  border-radius: 20px;
+}
+
+.running {
+  color: #16845b;
+  background: #e1f8ed;
+}
+
+.stopped {
+  color: #a05c22;
+  background: #fff0dc;
+}
+
+.machine-card h3 {
+  margin: 0 0 8px;
+}
+
+.os {
+  color: #8290a5;
+  font-size: 13px;
+  margin-bottom: 26px;
+}
+
+.resource {
+  margin-bottom: 20px;
+}
+
+.resource > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.resource span {
+  color: #69778e;
+}
+
+.resource strong {
+  color: #273750;
+}
+
+.stop-button {
+  background: #fff0f0;
+  color: #cf4545;
+  width: 100%;
+}
+
+.start-button {
+  background: #e1f8ed;
+  color: #16845b;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  color: #8a96a9;
+  font-size: 12px;
+  margin: 45px 0 10px;
+}
+
+@media (max-width: 900px) {
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .machine-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar,
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .summary,
+  .machine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 20px 14px;
+  }
+}
+.vm-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.vm-actions button {
+  flex: 1;
+}
+
+.delete-button {
+  background: #eef1f6;
+  color: #536176;
+}
